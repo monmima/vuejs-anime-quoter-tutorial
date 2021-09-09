@@ -1,26 +1,41 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+	<div class="app">
+		<Header title="The Anime Quoter" />
+		<Quote />
+	</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from "./components/Header.vue";
+import Quote from "./components/Quote.vue";
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+    name: 'App',
+    components: { 
+		Header,
+		Quote
+	}
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
+<style lang="scss">
+:root {
+	--primary: #D81E5B;
+	--secondary: #8a4fff;
+	--tertiary: #32cbff;
+	--dark: #131a26;
+	--grey: #848484;
 }
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Fire Sans", sans-serif;
+}
+
+ 
+
+
 </style>
