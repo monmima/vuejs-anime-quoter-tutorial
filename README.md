@@ -1,5 +1,10 @@
 # anime-quoter
 
+## Based on a tutorial by Tyler Potts
+
+- [Github repository](https://github.com/TylerPottsDev/)
+- [YouTube video](https://www.youtube.com/watch?v=QfgxPiaUrms)
+
 ## Project setup
 ```
 npm install

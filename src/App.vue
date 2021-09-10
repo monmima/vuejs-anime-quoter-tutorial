@@ -25,6 +25,7 @@ export default {
 	--secondary: #8a4fff;
 	--tertiary: #32cbff;
 	--dark: #131a26;
+	--light: #EEE;
 	--grey: #848484;
 }
 

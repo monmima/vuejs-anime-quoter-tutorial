@@ -8,7 +8,7 @@
                 Life
             </div>
             <div class="quote-author">
-                Me
+                Myself
             </div>
         </div>
     </section>
@@ -36,6 +36,12 @@ export default {
         color: var(--light);
         padding: 48px 32px;
         border-radius: 16px;
+
+        &:before, &:after {
+            content: '"';
+            color: var(--grey);
+            margin: 0px 2px;
+        }
     }
 
     &-info {
@@ -48,19 +54,26 @@ export default {
         
         .quote-author, .quote-anime {
             position: absolute;
-            padding: 12px 24px;
+            padding: 12px 16px;
             font-size: 24px;
             font-weight: 700;
             border-radius: 99px;
             color: var(--light);
             text-align: center;
-        }
+        } 
 
-        .quote-author {
-            top: calc(100% -32px);
+        .quote-author { 
+            top: calc(100% - 62px);
             right: 0;
             transform: translated(-50%);
             background-color: var(--secondary);
+        }
+
+        .quote-anime {
+            top: 0;
+            left: 0;
+            background-color: var(--tertiary);
+            color: var(--dark);
         }
     }
 }
