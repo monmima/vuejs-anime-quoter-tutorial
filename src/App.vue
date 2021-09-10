@@ -5,18 +5,21 @@
 		<div class="button-container">
 			<button @click="getQuote">Generate</button>
 		</div>
+		<QuoteList :quotes="quotes" />
 	</div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
 import Quote from "./components/Quote.vue";
+import QuoteList from "./components/QuoteList.vue";
 
 export default {
     name: 'App',
     components: { 
 		Header,
-		Quote
+		Quote,
+		QuoteList
 	},
 	data() {
 		return {
@@ -31,15 +34,16 @@ export default {
 			quote: {},
 
 			quotes: []
-		}
+		} 
 	},
 	methods: {
 		async getQuote() {
 
 			// to store the data
-			// if (this.quote.content) {
-			// 	this.quotes = [...this.quote, this.quote]
-			// }
+			// create a new array and concatenate the new data
+			if (this.quote.content) {
+				this.quotes = [...this.quotes, this.quote]
+			}
 
 			const data = await fetch("https://animechan.vercel.app/api/random")
 				.then (res => res.json());
@@ -54,7 +58,7 @@ export default {
 
 	},
 	created() {
-		// this.getQuote();
+		this.getQuote();
 	}
 }
 </script>
